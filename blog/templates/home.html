@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>모여서 각자 코딩해요</h1>
+
+    {% for blog in blogs %}
+        <div>
+        <h3>{{blog.title}}</h3>
+        {{blog.writer}}
+        {{blog.summary}} <a href = "{%url 'detail' blog.id %}">...더보기</a>
+        <br>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}
